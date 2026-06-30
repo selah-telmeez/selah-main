@@ -1,35 +1,48 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl" data-lang="ar">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-ar="سلاح التلميذ — البوابة الرقمية الإدارية" data-en="Selah ElTelmeez — Administrative Digital Portal">سلاح التلميذ — البوابة الرقمية الإدارية</title>
+  <title data-ar="سلاح التلميذ — البوابة الرقمية الإدارية" data-en="Selah ElTelmeez — Administrative Digital Portal">
+    سلاح التلميذ — البوابة الرقمية الإدارية</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Inter:wght@300;400;600;700&display=swap"
+    rel="stylesheet" />
 
   <style>
     :root {
-      --ink:      #0D2137;
-      --ink-mid:  #1A3A56;
-      --steel:    #2E5F84;
-      --azure:    #3A7DBE;
-      --sky:      #6AAED6;
-      --sand:     #F5EFE6;
+      --ink: #0D2137;
+      --ink-mid: #1A3A56;
+      --steel: #2E5F84;
+      --azure: #3A7DBE;
+      --sky: #6AAED6;
+      --sand: #F5EFE6;
       --sand-mid: #EDE3D5;
-      --gold:     #C89C3C;
-      --gold-lt:  #E8C97A;
-      --white:    #FFFFFF;
-      --text-body:#334E68;
+      --gold: #C89C3C;
+      --gold-lt: #E8C97A;
+      --white: #FFFFFF;
+      --text-body: #334E68;
       --text-sub: #6B7C8D;
-      --radius:   16px;
-      --shadow:   0 8px 40px rgba(13,33,55,.10);
-      --shadow-hover: 0 20px 60px rgba(13,33,55,.18);
-      --tr: .35s cubic-bezier(.4,0,.2,1);
+      --radius: 16px;
+      --shadow: 0 8px 40px rgba(13, 33, 55, .10);
+      --shadow-hover: 0 20px 60px rgba(13, 33, 55, .18);
+      --tr: .35s cubic-bezier(.4, 0, .2, 1);
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       background: var(--sand);
@@ -43,6 +56,7 @@
     [data-lang="ar"] * {
       font-family: 'Cairo', sans-serif;
     }
+
     [data-lang="en"] body,
     [data-lang="en"] * {
       font-family: 'Inter', sans-serif;
@@ -55,16 +69,20 @@
       left: 20px;
       z-index: 100;
     }
-    [data-lang="en"] .lang-bar { left: auto; right: 20px; }
+
+    [data-lang="en"] .lang-bar {
+      left: auto;
+      right: 20px;
+    }
 
     .lang-btn {
       display: flex;
       align-items: center;
       gap: 8px;
-      background: rgba(255,255,255,.15);
+      background: rgba(255, 255, 255, .15);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255,255,255,.30);
+      border: 1px solid rgba(255, 255, 255, .30);
       color: var(--white);
       font-size: .82rem;
       font-weight: 700;
@@ -75,11 +93,17 @@
       transition: background var(--tr), transform var(--tr);
       font-family: inherit;
     }
+
     .lang-btn:hover {
-      background: rgba(255,255,255,.25);
+      background: rgba(255, 255, 255, .25);
       transform: scale(1.04);
     }
-    .lang-btn svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+    .lang-btn svg {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+    }
 
     /* ─── HEADER ─── */
     header {
@@ -89,22 +113,24 @@
       overflow: hidden;
       text-align: center;
     }
+
     header::before {
       content: '';
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 80% 60% at 50% 120%, rgba(196,156,60,.20) 0%, transparent 70%),
-        radial-gradient(ellipse 60% 40% at 10% -10%, rgba(58,125,190,.25) 0%, transparent 60%);
+        radial-gradient(ellipse 80% 60% at 50% 120%, rgba(196, 156, 60, .20) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 40% at 10% -10%, rgba(58, 125, 190, .25) 0%, transparent 60%);
       pointer-events: none;
     }
+
     header::after {
       content: '';
       position: absolute;
       inset: 0;
       background-image:
-        repeating-linear-gradient(90deg, rgba(255,255,255,.025) 0px, rgba(255,255,255,.025) 1px, transparent 1px, transparent 80px),
-        repeating-linear-gradient(0deg,  rgba(255,255,255,.025) 0px, rgba(255,255,255,.025) 1px, transparent 1px, transparent 80px);
+        repeating-linear-gradient(90deg, rgba(255, 255, 255, .025) 0px, rgba(255, 255, 255, .025) 1px, transparent 1px, transparent 80px),
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, .025) 0px, rgba(255, 255, 255, .025) 1px, transparent 1px, transparent 80px);
       pointer-events: none;
     }
 
@@ -121,12 +147,15 @@
       align-items: center;
       gap: 20px;
       margin-bottom: 28px;
-      background: rgba(255,255,255,.07);
-      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255, 255, 255, .07);
+      border: 1px solid rgba(255, 255, 255, .14);
       padding: 14px 28px 14px 14px;
       border-radius: 100px;
     }
-    [data-lang="en"] .logo-assembly { padding: 14px 14px 14px 28px; }
+
+    [data-lang="en"] .logo-assembly {
+      padding: 14px 14px 14px 28px;
+    }
 
     .logo-mascot {
       width: 70px;
@@ -134,12 +163,17 @@
       border-radius: 50%;
       object-fit: cover;
       background: var(--white);
-      box-shadow: 0 0 0 3px var(--gold), 0 4px 20px rgba(200,156,60,.40);
+      box-shadow: 0 0 0 3px var(--gold), 0 4px 20px rgba(200, 156, 60, .40);
       flex-shrink: 0;
     }
 
-    .logo-text-group { text-align: right; }
-    [data-lang="en"] .logo-text-group { text-align: left; }
+    .logo-text-group {
+      text-align: right;
+    }
+
+    [data-lang="en"] .logo-text-group {
+      text-align: left;
+    }
 
     .logo-main {
       display: block;
@@ -148,6 +182,7 @@
       color: var(--white);
       line-height: 1.1;
     }
+
     .logo-sub {
       display: block;
       font-size: .78rem;
@@ -173,17 +208,23 @@
       line-height: 1.45;
       margin-bottom: 14px;
     }
+
     .hero-subtitle {
       font-size: 1rem;
       font-weight: 300;
-      color: rgba(255,255,255,.70);
+      color: rgba(255, 255, 255, .70);
       line-height: 1.85;
       max-width: 580px;
       margin: 0 auto;
     }
 
     /* ─── WAVE ─── */
-    .wave { display: block; width: 100%; height: 56px; margin-top: -1px; }
+    .wave {
+      display: block;
+      width: 100%;
+      height: 56px;
+      margin-top: -1px;
+    }
 
     /* ─── MAIN ─── */
     main {
@@ -196,6 +237,7 @@
       text-align: center;
       margin-bottom: 48px;
     }
+
     .section-label .eyebrow {
       display: inline-block;
       font-size: .75rem;
@@ -203,12 +245,13 @@
       letter-spacing: 2.5px;
       text-transform: uppercase;
       color: var(--gold);
-      background: rgba(200,156,60,.10);
-      border: 1px solid rgba(200,156,60,.28);
+      background: rgba(200, 156, 60, .10);
+      border: 1px solid rgba(200, 156, 60, .28);
       padding: 4px 16px;
       border-radius: 100px;
       margin-bottom: 12px;
     }
+
     .section-label h2 {
       font-size: clamp(1.3rem, 3vw, 1.9rem);
       font-weight: 700;
@@ -234,118 +277,353 @@
       text-decoration: none;
       color: inherit;
     }
-    .card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
-    .card::before { content: ''; display: block; height: 5px; width: 100%; }
-    .card-1::before { background: linear-gradient(90deg, var(--steel) 0%, var(--sky) 100%); }
-    .card-2::before { background: linear-gradient(90deg, var(--gold) 0%, var(--gold-lt) 100%); }
-    .card-3::before { background: linear-gradient(90deg, #3DAF7E 0%, #74D4AB 100%); }
 
-    .card-body { padding: 30px 26px 20px; flex: 1; }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .card::before {
+      content: '';
+      display: block;
+      height: 5px;
+      width: 100%;
+    }
+
+    .card-1::before {
+      background: linear-gradient(90deg, var(--steel) 0%, var(--sky) 100%);
+    }
+
+    .card-2::before {
+      background: linear-gradient(90deg, var(--gold) 0%, var(--gold-lt) 100%);
+    }
+
+    .card-3::before {
+      background: linear-gradient(90deg, #3DAF7E 0%, #74D4AB 100%);
+    }
+
+    /* Card 4 — Violet (Executive Dashboard) */
+    .card-4::before {
+      background: linear-gradient(90deg, var(--violet) 0%, var(--violet-lt) 100%);
+    }
+
+    .card-4 .card-icon {
+      background: rgba(107, 79, 163, .12);
+    }
+
+    .card-4 .card-icon svg {
+      stroke: var(--violet);
+    }
+
+    .card-4 .cta-text {
+      color: var(--violet);
+    }
+
+    .card-4 .arrow-icon {
+      background: rgba(107, 79, 163, .12);
+    }
+
+    .card-4 .arrow-icon svg {
+      stroke: var(--violet);
+    }
+
+    /* Card 5 — Coral (Meetings) */
+    .card-5::before {
+      background: linear-gradient(90deg, var(--coral) 0%, var(--coral-lt) 100%);
+    }
+
+    .card-5 .card-icon {
+      background: rgba(212, 91, 74, .12);
+    }
+
+    .card-5 .card-icon svg {
+      stroke: var(--coral);
+    }
+
+    .card-5 .cta-text {
+      color: var(--coral);
+    }
+
+    .card-5 .arrow-icon {
+      background: rgba(212, 91, 74, .12);
+    }
+
+    .card-5 .arrow-icon svg {
+      stroke: var(--coral);
+    }
+
+    .card-body {
+      padding: 30px 26px 20px;
+      flex: 1;
+    }
 
     .card-icon {
-      width: 50px; height: 50px;
+      width: 50px;
+      height: 50px;
       border-radius: 14px;
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin-bottom: 18px;
     }
-    .card-1 .card-icon { background: rgba(46,95,132,.10); }
-    .card-2 .card-icon { background: rgba(200,156,60,.12); }
-    .card-3 .card-icon { background: rgba(61,175,126,.12); }
-    .card-icon svg { width: 26px; height: 26px; }
-    .card-1 .card-icon svg { stroke: var(--steel); }
-    .card-2 .card-icon svg { stroke: var(--gold); }
-    .card-3 .card-icon svg { stroke: #3DAF7E; }
+
+    .card-1 .card-icon {
+      background: rgba(46, 95, 132, .10);
+    }
+
+    .card-2 .card-icon {
+      background: rgba(200, 156, 60, .12);
+    }
+
+    .card-3 .card-icon {
+      background: rgba(61, 175, 126, .12);
+    }
+
+    .card-icon svg {
+      width: 26px;
+      height: 26px;
+    }
+
+    .card-1 .card-icon svg {
+      stroke: var(--steel);
+    }
+
+    .card-2 .card-icon svg {
+      stroke: var(--gold);
+    }
+
+    .card-3 .card-icon svg {
+      stroke: #3DAF7E;
+    }
 
     .card-number {
-      font-size: .68rem; font-weight: 700;
-      letter-spacing: 2px; text-transform: uppercase;
-      color: var(--text-sub); margin-bottom: 8px; display: block;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-sub);
+      margin-bottom: 8px;
+      display: block;
     }
-    .card h3 { font-size: 1.18rem; font-weight: 700; color: var(--ink); line-height: 1.4; margin-bottom: 10px; }
-    .card p  { font-size: .92rem; font-weight: 400; color: var(--text-body); line-height: 1.82; }
 
-    .card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 18px; }
+    .card h3 {
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: .92rem;
+      font-weight: 400;
+      color: var(--text-body);
+      line-height: 1.82;
+    }
+
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 18px;
+    }
+
     .tag {
-      font-size: .71rem; font-weight: 600;
-      padding: 3px 10px; border-radius: 100px;
-      background: var(--sand); color: var(--text-sub);
+      font-size: .71rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 100px;
+      background: var(--sand);
+      color: var(--text-sub);
       border: 1px solid var(--sand-mid);
     }
 
     .card-footer {
       padding: 14px 26px 22px;
       border-top: 1px solid var(--sand);
-      display: flex; align-items: center; justify-content: space-between; gap: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
     }
-    .cta-text { font-size: .87rem; font-weight: 600; }
-    .card-1 .cta-text { color: var(--steel); }
-    .card-2 .cta-text { color: var(--gold); }
-    .card-3 .cta-text { color: #3DAF7E; }
+
+    .cta-text {
+      font-size: .87rem;
+      font-weight: 600;
+    }
+
+    .card-1 .cta-text {
+      color: var(--steel);
+    }
+
+    .card-2 .cta-text {
+      color: var(--gold);
+    }
+
+    .card-3 .cta-text {
+      color: #3DAF7E;
+    }
 
     .arrow-icon {
-      width: 32px; height: 32px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      transition: transform var(--tr); flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform var(--tr);
+      flex-shrink: 0;
     }
-    .card-1 .arrow-icon { background: rgba(46,95,132,.10); }
-    .card-2 .arrow-icon { background: rgba(200,156,60,.12); }
-    .card-3 .arrow-icon { background: rgba(61,175,126,.12); }
-    .card:hover .arrow-icon { transform: translateX(-5px); }
-    [data-lang="en"] .card:hover .arrow-icon { transform: translateX(5px); }
-    .arrow-icon svg { width: 16px; height: 16px; }
-    .card-1 .arrow-icon svg { stroke: var(--steel); }
-    .card-2 .arrow-icon svg { stroke: var(--gold); }
-    .card-3 .arrow-icon svg { stroke: #3DAF7E; }
+
+    .card-1 .arrow-icon {
+      background: rgba(46, 95, 132, .10);
+    }
+
+    .card-2 .arrow-icon {
+      background: rgba(200, 156, 60, .12);
+    }
+
+    .card-3 .arrow-icon {
+      background: rgba(61, 175, 126, .12);
+    }
+
+    .card:hover .arrow-icon {
+      transform: translateX(-5px);
+    }
+
+    [data-lang="en"] .card:hover .arrow-icon {
+      transform: translateX(5px);
+    }
+
+    .arrow-icon svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .card-1 .arrow-icon svg {
+      stroke: var(--steel);
+    }
+
+    .card-2 .arrow-icon svg {
+      stroke: var(--gold);
+    }
+
+    .card-3 .arrow-icon svg {
+      stroke: #3DAF7E;
+    }
+
+    .card:nth-child(4) {
+      animation-delay: .46s;
+    }
+
+    .card:nth-child(5) {
+      animation-delay: .58s;
+    }
 
     /* ─── FOOTER ─── */
     footer {
       background: var(--ink);
-      color: rgba(255,255,255,.45);
+      color: rgba(255, 255, 255, .45);
       text-align: center;
       padding: 26px 24px;
-      font-size: .80rem; letter-spacing: .4px;
+      font-size: .80rem;
+      letter-spacing: .4px;
     }
-    footer strong { color: var(--gold-lt); font-weight: 600; }
+
+    footer strong {
+      color: var(--gold-lt);
+      font-weight: 600;
+    }
 
     /* ─── RTL / LTR ─── */
-    [data-lang="en"] { direction: ltr; }
-    [data-lang="ar"] { direction: rtl; }
+    [data-lang="en"] {
+      direction: ltr;
+    }
+
+    [data-lang="ar"] {
+      direction: rtl;
+    }
 
     /* ─── ANIMATIONS ─── */
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(22px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(22px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-    .card { animation: fadeUp .55s ease both; }
-    .card:nth-child(1) { animation-delay: .10s; }
-    .card:nth-child(2) { animation-delay: .22s; }
-    .card:nth-child(3) { animation-delay: .34s; }
+
+    .card {
+      animation: fadeUp .55s ease both;
+    }
+
+    .card:nth-child(1) {
+      animation-delay: .10s;
+    }
+
+    .card:nth-child(2) {
+      animation-delay: .22s;
+    }
+
+    .card:nth-child(3) {
+      animation-delay: .34s;
+    }
 
     @media (prefers-reduced-motion: reduce) {
-      .card { animation: none; }
-      .card:hover { transform: none; }
+      .card {
+        animation: none;
+      }
+
+      .card:hover {
+        transform: none;
+      }
     }
 
     @media (max-width: 640px) {
-      header { padding: 44px 18px 60px; }
-      .logo-assembly { padding: 10px 20px 10px 10px; gap: 14px; }
-      .logo-mascot { width: 56px; height: 56px; }
-      .logo-main { font-size: 1.45rem; }
-      main { padding: 36px 14px 64px; }
-      .cards { grid-template-columns: 1fr; }
+      header {
+        padding: 44px 18px 60px;
+      }
+
+      .logo-assembly {
+        padding: 10px 20px 10px 10px;
+        gap: 14px;
+      }
+
+      .logo-mascot {
+        width: 56px;
+        height: 56px;
+      }
+
+      .logo-main {
+        font-size: 1.45rem;
+      }
+
+      main {
+        padding: 36px 14px 64px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- Lang toggle -->
   <div class="lang-bar">
     <button class="lang-btn" onclick="toggleLang()" id="langBtn" aria-label="Switch language">
-      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="8" cy="8" r="6.5"/>
-        <path d="M8 1.5C8 1.5 5.5 4 5.5 8s2.5 6.5 2.5 6.5"/>
-        <path d="M8 1.5C8 1.5 10.5 4 10.5 8s-2.5 6.5-2.5 6.5"/>
-        <line x1="1.5" y1="8" x2="14.5" y2="8"/>
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+        stroke-linejoin="round">
+        <circle cx="8" cy="8" r="6.5" />
+        <path d="M8 1.5C8 1.5 5.5 4 5.5 8s2.5 6.5 2.5 6.5" />
+        <path d="M8 1.5C8 1.5 10.5 4 10.5 8s-2.5 6.5-2.5 6.5" />
+        <line x1="1.5" y1="8" x2="14.5" y2="8" />
       </svg>
       <span id="langLabel">English</span>
     </button>
@@ -355,7 +633,9 @@
   <header>
     <div class="header-inner">
       <div class="logo-assembly">
-        <img class="logo-mascot" src="data:image/jpeg;base64,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" alt="Selah ElTelmeez mascot" />
+        <img class="logo-mascot"
+          src="data:image/jpeg;base64,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"
+          alt="Selah ElTelmeez mascot" />
         <div class="logo-text-group">
           <span class="logo-main" data-ar="سلاح التلميذ" data-en="Selah ElTelmeez">سلاح التلميذ</span>
           <span class="logo-sub" data-ar="قطاع المحتوى" data-en="Content Sector">قطاع المحتوى</span>
@@ -364,20 +644,22 @@
 
       <div class="hero-divider"></div>
 
-      <h1 class="hero-title" data-ar="البوابة الرقمية الإدارية لقطاع المحتوى" data-en="Administrative Digital Portal — Content Sector">
+      <h1 class="hero-title" data-ar="البوابة الرقمية الإدارية لقطاع المحتوى"
+        data-en="Administrative Digital Portal — Content Sector">
         البوابة الرقمية الإدارية لقطاع المحتوى
       </h1>
       <p class="hero-subtitle"
-         data-ar="منظومة متكاملة من الأدوات الإلكترونية لإدارة الموارد البشرية، ومتابعة إنتاج الكتب، وضبط المواصفات — في مكان واحد."
-         data-en="An integrated suite of digital tools for managing human resources, tracking book production, and controlling specifications — all in one place.">
-        منظومة متكاملة من الأدوات الإلكترونية لإدارة الموارد البشرية، ومتابعة إنتاج الكتب، وضبط المواصفات — في مكان واحد.
+        data-ar="منظومة متكاملة من الأدوات الإلكترونية لإدارة الموارد البشرية، ومتابعة إنتاج الكتب، وضبط المواصفات — في مكان واحد."
+        data-en="An integrated suite of digital tools for managing human resources, tracking book production, and controlling specifications — all in one place.">
+        منظومة متكاملة من الأدوات الإلكترونية لإدارة الموارد البشرية، ومتابعة إنتاج الكتب، وضبط المواصفات — في مكان
+        واحد.
       </p>
     </div>
   </header>
 
   <!-- Wave -->
   <svg class="wave" viewBox="0 0 1440 56" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0,0 C360,56 1080,0 1440,46 L1440,56 L0,56 Z" fill="#F5EFE6"/>
+    <path d="M0,0 C360,56 1080,0 1440,46 L1440,56 L0,56 Z" fill="#F5EFE6" />
   </svg>
 
   <!-- Main -->
@@ -396,15 +678,18 @@
         <div class="card-body">
           <div class="card-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/>
-              <rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 17.5h7M17.5 14v7"/>
+              <rect x="3" y="3" width="7" height="7" rx="1.5" />
+              <rect x="14" y="3" width="7" height="7" rx="1.5" />
+              <rect x="3" y="14" width="7" height="7" rx="1.5" />
+              <path d="M14 17.5h7M17.5 14v7" />
             </svg>
           </div>
           <span class="card-number" data-ar="نظام ٠١" data-en="System 01">نظام ٠١</span>
           <h3 data-ar="لوحة تحكم قطاع المحتوى" data-en="Content Sector Dashboard">لوحة تحكم قطاع المحتوى</h3>
           <p data-ar="استعرض بيانات الموارد البشرية الشاملة عبر الأقسام والوحدات، واحسب تكاليف الإنتاج وجدوله الزمني، وصدّر التقارير بضغطة واحدة."
-             data-en="View comprehensive HR data across departments and units, calculate production costs and timelines, and export reports in one click.">
-            استعرض بيانات الموارد البشرية الشاملة عبر الأقسام والوحدات، واحسب تكاليف الإنتاج وجدوله الزمني، وصدّر التقارير بضغطة واحدة.
+            data-en="View comprehensive HR data across departments and units, calculate production costs and timelines, and export reports in one click.">
+            استعرض بيانات الموارد البشرية الشاملة عبر الأقسام والوحدات، واحسب تكاليف الإنتاج وجدوله الزمني، وصدّر
+            التقارير بضغطة واحدة.
           </p>
           <div class="card-tags">
             <span class="tag" data-ar="١٥١ موظفاً" data-en="151 Employees">١٥١ موظفاً</span>
@@ -417,26 +702,29 @@
           <span class="cta-text" data-ar="فتح لوحة التحكم" data-en="Open Dashboard">فتح لوحة التحكم</span>
           <span class="arrow-icon">
             <svg viewBox="0 0 16 16" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M10 8H3M6 5l-3 3 3 3"/>
+              <path d="M10 8H3M6 5l-3 3 3 3" />
             </svg>
           </span>
         </div>
       </a>
 
       <!-- Card 2 -->
-      <a class="card card-2" href="https://silahcmswithemployees-production.up.railway.app/" target="_blank" rel="noopener">
+      <a class="card card-2" href="https://silahcmswithemployees-production.up.railway.app/" target="_blank"
+        rel="noopener">
         <div class="card-body">
           <div class="card-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-              <path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+              <path d="M12 2L2 7l10 5 10-5-10-5z" />
+              <path d="M2 17l10 5 10-5" />
+              <path d="M2 12l10 5 10-5" />
             </svg>
           </div>
           <span class="card-number" data-ar="نظام ٠٢" data-en="System 02">نظام ٠٢</span>
           <h3 data-ar="نظام إدارة إنتاج الكتب" data-en="Book Production Management System">نظام إدارة إنتاج الكتب</h3>
           <p data-ar="تتبّع مراحل إنتاج الكتب من التصميم وحتى التسليم، وادر مهام الفريق وتحديثاتهم، وراقب سير العمل في الوقت الفعلي."
-             data-en="Track book production stages from design to delivery, manage team tasks and updates, and monitor workflow progress in real time.">
-            تتبّع مراحل إنتاج الكتب من التصميم وحتى التسليم، وادر مهام الفريق وتحديثاتهم، وراقب سير العمل في الوقت الفعلي.
+            data-en="Track book production stages from design to delivery, manage team tasks and updates, and monitor workflow progress in real time.">
+            تتبّع مراحل إنتاج الكتب من التصميم وحتى التسليم، وادر مهام الفريق وتحديثاتهم، وراقب سير العمل في الوقت
+            الفعلي.
           </p>
           <div class="card-tags">
             <span class="tag" data-ar="إدارة المهام" data-en="Task Management">إدارة المهام</span>
@@ -448,7 +736,7 @@
           <span class="cta-text" data-ar="فتح نظام الإدارة" data-en="Open CMS">فتح نظام الإدارة</span>
           <span class="arrow-icon">
             <svg viewBox="0 0 16 16" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M10 8H3M6 5l-3 3 3 3"/>
+              <path d="M10 8H3M6 5l-3 3 3 3" />
             </svg>
           </span>
         </div>
@@ -459,16 +747,18 @@
         <div class="card-body">
           <div class="card-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-              <path d="M9 7h6M9 11h4"/>
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+              <path d="M9 7h6M9 11h4" />
             </svg>
           </div>
           <span class="card-number" data-ar="نظام ٠٣" data-en="System 03">نظام ٠٣</span>
-          <h3 data-ar="بوابة مواصفات الكتاب الخارجي" data-en="External Book Specifications Portal">بوابة مواصفات الكتاب الخارجي</h3>
+          <h3 data-ar="بوابة مواصفات الكتاب الخارجي" data-en="External Book Specifications Portal">بوابة مواصفات الكتاب
+            الخارجي</h3>
           <p data-ar="تعبئة استبانات مواصفات الكتب من قِبَل الإدارات المختلفة، ومراجعة الإجابات وإقرار المواصفات النهائية وإرسالها للإنتاج."
-             data-en="Fill book specification forms across departments, review responses, approve final specifications, and send them to production.">
-            تعبئة استبانات مواصفات الكتب من قِبَل الإدارات المختلفة، ومراجعة الإجابات وإقرار المواصفات النهائية وإرسالها للإنتاج.
+            data-en="Fill book specification forms across departments, review responses, approve final specifications, and send them to production.">
+            تعبئة استبانات مواصفات الكتب من قِبَل الإدارات المختلفة، ومراجعة الإجابات وإقرار المواصفات النهائية وإرسالها
+            للإنتاج.
           </p>
           <div class="card-tags">
             <span class="tag" data-ar="استبانات إلكترونية" data-en="Digital Forms">استبانات إلكترونية</span>
@@ -480,7 +770,77 @@
           <span class="cta-text" data-ar="فتح بوابة المواصفات" data-en="Open Specs Portal">فتح بوابة المواصفات</span>
           <span class="arrow-icon">
             <svg viewBox="0 0 16 16" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M10 8H3M6 5l-3 3 3 3"/>
+              <path d="M10 8H3M6 5l-3 3 3 3" />
+            </svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- Card 4 -->
+      <a class="card card-4" href="https://selah-telmeez.github.io/main-2/" target="_blank" rel="noopener">
+        <div class="card-body">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 20V10" />
+              <path d="M12 20V4" />
+              <path d="M6 20v-6" />
+            </svg>
+          </div>
+          <span class="card-number" data-ar="نظام ٠٤" data-en="System 04">نظام ٠٤</span>
+          <h3 data-ar="لوحة الأداء التنفيذية المتكاملة" data-en="Integrated Executive Performance Dashboard">
+            لوحة الأداء التنفيذية المتكاملة
+          </h3>
+          <p data-ar="نظرة شاملة تجمع مؤشرات الموارد البشرية، الإنتاج والتكلفة، الاجتماعات، ومواصفات الكتب — في لوحة تنفيذية واحدة."
+            data-en="A unified view combining HR, production & cost, meetings, and book specifications — all in one executive dashboard.">
+            نظرة شاملة تجمع مؤشرات الموارد البشرية، الإنتاج والتكلفة، الاجتماعات، ومواصفات الكتب — في لوحة تنفيذية
+            واحدة.
+          </p>
+          <div class="card-tags">
+            <span class="tag" data-ar="مؤشرات موحّدة" data-en="Unified KPIs">مؤشرات موحّدة</span>
+            <span class="tag" data-ar="رؤى استراتيجية" data-en="Strategic Insights">رؤى استراتيجية</span>
+            <span class="tag" data-ar="٣ أنظمة مترابطة" data-en="3 Linked Systems">٣ أنظمة مترابطة</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="cta-text" data-ar="فتح لوحة الأداء" data-en="Open Dashboard">فتح لوحة الأداء</span>
+           <span class="arrow-icon">
+            <svg viewBox="0 0 16 16" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 8H3M6 5l-3 3 3 3" />
+            </svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- Card 5 -->
+      <a class="card card-5" href="https://web-production-bcb510.up.railway.app/" target="_blank" rel="noopener">
+        <div class="card-body">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" />
+              <path d="M16 2v4M8 2v4" />
+              <path d="M3 10h18" />
+              <path d="M8 14h.01M12 14h.01M16 14h.01" />
+            </svg>
+          </div>
+          <span class="card-number" data-ar="نظام ٠٥" data-en="System 05">نظام ٠٥</span>
+          <h3 data-ar="تحليلات الاجتماعات والنتائج" data-en="Meeting Analytics & Outcomes">
+            تحليلات الاجتماعات والنتائج
+          </h3>
+          <p data-ar="سجّل الاجتماعات، تتبّع بنود العمل والعوائق، وحلّل الحضور والأهداف والنتائج عبر فريق المحتوى."
+            data-en="Record meetings, track action items and blockers, and analyze attendance, objectives, and outcomes across the content team.">
+            سجّل الاجتماعات، تتبّع بنود العمل والعوائق، وحلّل الحضور والأهداف والنتائج عبر فريق المحتوى.
+          </p>
+          <div class="card-tags">
+            <span class="tag" data-ar="سجل الاجتماعات" data-en="Meeting Log">سجل الاجتماعات</span>
+            <span class="tag" data-ar="بنود العمل" data-en="Action Items">بنود العمل</span>
+            <span class="tag" data-ar="تحليلات" data-en="Analytics">تحليلات</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="cta-text" data-ar="فتح نظام الاجتماعات" data-en="Open Meetings">فتح نظام الاجتماعات</span>
+          <span class="arrow-icon">
+            <svg viewBox="0 0 16 16" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 8H3M6 5l-3 3 3 3" />
             </svg>
           </span>
         </div>
@@ -492,7 +852,8 @@
   <!-- Footer -->
   <footer>
     <span class="footer-ar"><strong>سلاح التلميذ</strong> — قطاع المحتوى &nbsp;·&nbsp; جميع الحقوق محفوظة © ٢٠٢٥</span>
-    <span class="footer-en" style="display:none"><strong>Selah ElTelmeez</strong> — Content Sector &nbsp;·&nbsp; All rights reserved © 2025</span>
+    <span class="footer-en" style="display:none"><strong>Selah ElTelmeez</strong> — Content Sector &nbsp;·&nbsp; All
+      rights reserved © 2025</span>
   </footer>
 
   <script>
@@ -533,4 +894,5 @@
     }
   </script>
 </body>
+
 </html>
