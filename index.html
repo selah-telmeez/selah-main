@@ -23,6 +23,10 @@
       --sand-mid: #EDE3D5;
       --gold: #C89C3C;
       --gold-lt: #E8C97A;
+      --violet: #6B4FA3;
+      --violet-lt: #9B7FD4;
+      --coral: #D45B4A;
+      --coral-lt: #E88A7A;
       --white: #FFFFFF;
       --text-body: #334E68;
       --text-sub: #6B7C8D;
@@ -352,6 +356,31 @@
       stroke: var(--coral);
     }
 
+    /* Card 6 — Indigo (CEO Dashboard) */
+    .card-6::before {
+      background: linear-gradient(90deg, #1E3A5F 0%, #4A6FA5 100%);
+    }
+
+    .card-6 .card-icon {
+      background: rgba(30, 58, 95, .12);
+    }
+
+    .card-6 .card-icon svg {
+      stroke: #1E3A5F;
+    }
+
+    .card-6 .cta-text {
+      color: #1E3A5F;
+    }
+
+    .card-6 .arrow-icon {
+      background: rgba(30, 58, 95, .12);
+    }
+
+    .card-6 .arrow-icon svg {
+      stroke: #1E3A5F;
+    }
+
     .card-body {
       padding: 30px 26px 20px;
       flex: 1;
@@ -518,6 +547,10 @@
 
     .card:nth-child(5) {
       animation-delay: .58s;
+    }
+
+    .card:nth-child(6) {
+      animation-delay: .70s;
     }
 
     /* ─── FOOTER ─── */
@@ -803,7 +836,7 @@
         </div>
         <div class="card-footer">
           <span class="cta-text" data-ar="فتح لوحة الأداء" data-en="Open Dashboard">فتح لوحة الأداء</span>
-           <span class="arrow-icon">
+          <span class="arrow-icon">
             <svg viewBox="0 0 16 16" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M10 8H3M6 5l-3 3 3 3" />
             </svg>
@@ -838,6 +871,38 @@
         </div>
         <div class="card-footer">
           <span class="cta-text" data-ar="فتح نظام الاجتماعات" data-en="Open Meetings">فتح نظام الاجتماعات</span>
+          <span class="arrow-icon">
+            <svg viewBox="0 0 16 16" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 8H3M6 5l-3 3 3 3" />
+            </svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- Card 6 -->
+      <a class="card card-6" href="https://selah-telmeez.github.io/ceo-dashboard/" target="_blank" rel="noopener">
+        <div class="card-body">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 3v18h18" />
+              <path d="M7 16l4-4 4 4 5-6" />
+            </svg>
+          </div>
+          <span class="card-number" data-ar="نظام ٠٦" data-en="System 06">نظام ٠٦</span>
+          <h3 data-ar="لوحة الرئيس التنفيذي" data-en="CEO Dashboard">لوحة الرئيس التنفيذي</h3>
+          <p data-ar="رؤية تنفيذية حية تجمع مؤشرات الأداء الرئيسية — التسليم في الموعد، جودة الإنتاج، التكلفة، والموارد البشرية — في لوحة مجلس إدارة واحدة."
+            data-en="Live executive intelligence combining key performance indicators — on-time delivery, production quality, cost, and people — in one board dashboard.">
+            رؤية تنفيذية حية تجمع مؤشرات الأداء الرئيسية — التسليم في الموعد، جودة الإنتاج، التكلفة، والموارد
+            البشرية — في لوحة مجلس إدارة واحدة.
+          </p>
+          <div class="card-tags">
+            <span class="tag" data-ar="مؤشرات حية" data-en="Live KPIs">مؤشرات حية</span>
+            <span class="tag" data-ar="جودة الإنتاج" data-en="Production Quality">جودة الإنتاج</span>
+            <span class="tag" data-ar="رؤية مجلس الإدارة" data-en="Board View">رؤية مجلس الإدارة</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="cta-text" data-ar="فتح لوحة الرئيس التنفيذي" data-en="Open CEO Dashboard">فتح لوحة الرئيس التنفيذي</span>
           <span class="arrow-icon">
             <svg viewBox="0 0 16 16" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M10 8H3M6 5l-3 3 3 3" />
